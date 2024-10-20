@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Creation of user accounts or registration-->
+    <title>Registration</title>
+    <style>
+        body {
+            background-image: url('../image/bk1.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 1500px auto;
+            margin-top: -120px;
+        }
+
+        .container {
+            font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: right;
+            min-height: 100vh;
+            background-position: center;
+            font-size: 25px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            border-radius: 70px;
+        }
+
+        form input[type="text"],
+        form input[type="password"] {
+            font-size: 20px;
+            border-radius: 10px;
+            padding: 5px;
+            border: 1px solid lightskyblue;
+            box-sizing: border-box;
+            margin-bottom: 13px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        form input[type="text"] {
+            text-align: left;
+            box-shadow: 4px 8px rgba(0, 0, 0, 0.4), 0 0 16px rgba(0, 0, 0, 0.2);
+        }
+
+        form input[type="password"] {
+            text-align: left;
+            box-shadow: 4px 8px rgba(0, 0, 0, 0.4), 0 0 16px rgba(0, 0, 0, 0.2);
+
+        }
+
+        .buttoncss {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 20px;
+            background-color: #00ffff;
+            color: black;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-right: 10px;
+            border-color: black;
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+
+        }
+
+        .signup {
+            text-align: center;
+            margin-top: 5px;
+            font-size: 35px;
+            color: red;
+            margin-bottom: 20px;
+            font-family: "Georgia", serif;
+        }
+    </style>
+    <script language="javascript" src="register.js"></script>
+    <script language="javascript" src="fname-ajax.js"></script>
+    <script language="javascript" src="lname-ajax.js"></script>
+    <script language="javascript" src="uname-ajax.js"></script>
+    <script language="javascript" src="pcode1-ajax.js"></script>
+    <script language="javascript" src="pcode2-ajax.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!--Form-->
+        <form id="form1" method="post" action="SignUp.php">
+
+            <!--Form fields to input data-->
+            <div class="signup">
+                <label for="signup">SIGN UP:</label><br>
+            </div>
+            <label for="username">Username:</label>
+            <input id="username" type="text" name="username" onkeyup="validateUName()" required>
+            <span id="username-error"></span>
+            <br>
+            <br>
+            <label for="password">Password:</label>
+            <input id="password" type="password" name="password" oninput="check()" onkeyup="validatePass()" required>
+            <span id="password-error"></span>
+            <br>
+            <br>
+            <label for="confirmpassword">Confirm Password:</label>
+            <input id="confirmpassword" type="password" name="comfirmpassword" oninput="check()"
+                onkeyup="validateConfPass()" required>
+            <span id="confirmpassword-error"></span>
+            <br>
+            <br>
+            <label for="firstname">First Name:</label>
+            <input id="firstname" type="text" name="firstname" onkeyup="validateFName()" required>
+            <span id="firstname-error"></span>
+            <br>
+            <br>
+            <label for="lastname">Last Name:</label>
+            <input id="lastname" type="text" name="lastname" onkeyup="validateLName()" required>
+            <span id="lastname-error"></span>
+
+            <div class="buttoncss">
+                <!--Register button to send form data-->
+                <input id="register1" type="submit" name="register" value="SIGN UP" />
+                <a class="dropdown-item" href="../Index.php">Home</a>
+                <!-- <input id="register1" type="submit" name="login" value="LOG IN" />  -->
+            </div>
+        </form>
+
+    </div>
+</body>
+
+</html>
