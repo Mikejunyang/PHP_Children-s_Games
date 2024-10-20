@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Creation of user accounts or registration-->
+        <title>Edit user's Data</title>
+        <style>
+            body{
+                background-color: white;
+            }
+        </style>
+        <script language="javascript" src="register.js"></script>
+        <script language="javascript" src="fname-ajax.js"></script>
+        <script language="javascript" src="lname-ajax.js"></script>
+        <script language="javascript" src="uname-ajax.js"></script>
+        <script language="javascript" src="pcode1-ajax.js"></script>
+        <script language="javascript" src="pcode2-ajax.js"></script>
+    </head>
+    <body>
+        <!--Form-->
+        <form id="form1" method="post" action="edit.php" >
+
+        <!--Form fields to input data--> 
+        <label for="username">Username:</label>
+        <input id="username" type="text" name="username" onkeyup="validateUName()" required>
+        <span id="username-error"></span>
+        <br>
+        <br>
+        <label for="password">Password:</label>
+        <input id="password" type="text" name="password" oninput="check()" onkeyup="validatePass()" required>
+        <span id="password-error"></span>
+        <br>
+        <br>
+        <label for="confirmpassword">Confirm Password:</label>
+        <input id="confirmpassword" type="text" name="comfirmpassword" oninput="check()" onkeyup="validateConfPass()" required>
+        <span id="confirmpassword-error"></span>
+        <br>
+        <br>
+        <label for="firstname">First Name:</label>
+        <input id="firstname" type="text" name="firstname" onkeyup="validateFName()" required>
+        <span id="firstname-error"></span>
+        <br>
+        <br>
+        <label for="lastname">Last Name:</label>
+        <input id="lastname" type="text" name="lastname" onkeyup="validateLName()" required>
+        <span id="lastname-error"></span>
+        <hr>
+        <!--Register button to send form data-->
+        <input id="register1" type="submit" name="register" value="Edit" />
+        <br>
+        <a href = "../LogIn/Login.php"><button id="logoutButton" >Log In</button></a>
+        <!-- <br>
+        <input id="register1" type="submit" name="login" value="LOGIN" /> -->
+
+        </form>
+    </body>
+</html>
