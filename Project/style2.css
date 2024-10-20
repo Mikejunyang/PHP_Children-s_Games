@@ -1,0 +1,93 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    text-align: center;
+    margin-top: 50px;
+}
+
+h2 {
+    color: #007BFF;
+}
+
+p {
+    font-size: 18px;
+}
+
+form {
+    margin: 20px auto;
+    width: fit-content;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+input[type="submit"] {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+input[name="cancel"] {
+    background-color: #dc3545;
+}
+
+input[name="cancel"]:hover {
+    background-color: #c82333;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+form,
+h2 {
+    animation: slideIn 0.5s ease-out;
+}
+
+/* CSS 动画 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+.grow:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
+}
