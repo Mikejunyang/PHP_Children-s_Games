@@ -1,0 +1,39 @@
+<!--Form-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="LogIn.css">
+    <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <title>Log In</title>
+</head>
+
+<body>
+    <h1>Log In</h1>
+    <div class="wrapper">
+        <form id="form1" method="post" action="LogIn.php">
+            <div class="input-box">
+                <label for=input1>Enter your Username</label></th>
+                <input id=input1 type="text" name="UserName" required="required"></td>
+                <i class='bx bxs-user'></i>
+            </div>
+
+            <div class="input-box">
+                <label for=input2>Enter your Password</label></th>
+                <input id=input2 type="text" name="Password" required="required"></td>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+
+            <input id="submit1" type="submit" name="send" value="Log In" />
+            <a href="../Edit/Edit.html"><button type="button" id="edit">Edit</button></a>
+            <a class="dropdown-item" href="../SignUp/SignUp.html">Sign Up</a>
+            <a class="dropdown-item" href="../Index.php">Home</a>
+
+
+        </form>
+    </div>
+</body>
+
+</html>
